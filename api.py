@@ -52,6 +52,7 @@ class ChatTurn(BaseModel):
 class AskRequest(BaseModel):
     query: str = Field(..., min_length=1, max_length=2000)
     chat_history: Optional[List[ChatTurn]] = None
+    offline: bool = Field(default=False, description="true = raw passages only, no Groq call")
 class SourceRef(BaseModel):
     source: str
     page: object
@@ -90,7 +91,7 @@ def ask(req: AskRequest) -> AskResponse:
     if rag is None:
         raise HTTPException(status_code=503, detail="Pipeline not loaded yet.")
     try:
-        result = rag.generate(req.query, [t.model_dump() for t in (req.chat_history or [])])
+        result = rag.generate(req.query, [t.model_dump() for t in (req.chat_history or [])], offline=req.offline)
         return AskResponse(**result)
     except HTTPException:
         raise

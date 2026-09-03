@@ -154,7 +154,7 @@ class MedicalRAG:
         )
         return response.choices[0].message.content
 
-    def generate(self, query: str, chat_history: Optional[List[dict]] = None) -> Dict[str, Any]:
+    def generate(self, query: str, chat_history: Optional[List[dict]] = None, offline: bool = False) -> Dict[str, Any]:
         t0 = time.perf_counter()
         if not is_valid_query(query):
             return {"answer":"Please enter a valid medical question.","sources":[],"is_emergency":False,"latency":0.0}
@@ -176,7 +176,7 @@ class MedicalRAG:
         top_docs=self.rerank(query, docs, top_n=4)
         logger.info("rerank: %.3fs", time.perf_counter()-t2)
         t3=time.perf_counter()
-        if self.groq_client is None:
+        if offline or self.groq_client is None:
             answer=self._stub_answer(top_docs)
         else:
             prompt=SYSTEM_PROMPT.format(context=format_context(top_docs), chat_history=format_chat_history(chat_history or []))

@@ -13,7 +13,7 @@ from safety import EMERGENCY_RESPONSE, REFUSAL, check_emergency, is_valid_query,
 
 class _FakeRAG:
     kb_count = 9
-    def generate(self, query, chat_history=None):
+    def generate(self, query, chat_history=None, offline=False, **kwargs):
         t0 = _time.perf_counter()
         if not is_valid_query(query):
             return {"answer": "Please enter a valid medical question.", "sources": [], "is_emergency": False, "latency": 0.0}

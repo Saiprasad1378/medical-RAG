@@ -150,6 +150,26 @@ export default function Home() {
         </div>
       </section>
 
+      ﻿      {/* WHERE TO FIND PDFs */}
+      <section className="mx-auto max-w-[1200px] px-4 sm:px-6 py-8">
+        <div className="rounded-[12px] border border-[#171717] bg-[#f7efe9] p-6 sm:p-8">
+          <div className="flex flex-wrap items-baseline gap-3">
+            <h2 className="text-[28px] sm:text-[32px] font-[400] lowercase" style={{fontFamily:"var(--font-fraunces)", color:"#2b1a07"}}>where to find pdfs</h2>
+            <span className="text-[11px] tracking-[0.16em] uppercase opacity-50">open, citable, free</span>
+          </div>
+          <p className="mt-2 text-[14px] leading-6 opacity-70">MediAssist only answers from your PDFs — start with these trustworthy handbooks. All free to download then upload in chat.</p>
+          <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <a href="https://www.who.int/publications" target="_blank" className="rounded-[12px] border border-[#171717] bg-[#fdfbf9] p-5 block hover:shadow-[0_6px_16px_rgba(0,0,0,0.06)]"><div className="text-[11px] tracking-[0.14em] uppercase font-[700]">WHO</div><div className="mt-2 text-[14px] font-[600] lowercase" style={{fontFamily:"var(--font-fraunces)"}}>who publications</div><div className="text-[12px] opacity-60">dengue, malaria, IMCI handbooks</div><div className="mt-3 text-[11px] underline decoration-[#ff6f1e]">who.int/publications →</div></a>
+            <a href="https://www.cdc.gov" target="_blank" className="rounded-[12px] border border-[#171717] bg-[#fdfbf9] p-5 block"><div className="text-[11px] tracking-[0.14em] uppercase font-[700]">CDC</div><div className="mt-2 text-[14px] font-[600] lowercase" style={{fontFamily:"var(--font-fraunces)"}}>cdc guidelines</div><div className="text-[12px] opacity-60">clinical overviews, print to PDF</div><div className="mt-3 text-[11px] underline decoration-[#ff6f1e]">cdc.gov →</div></a>
+            <a href="https://www.ncbi.nlm.nih.gov/books/" target="_blank" className="rounded-[12px] border border-[#171717] bg-[#fdfbf9] p-5 block"><div className="text-[11px] tracking-[0.14em] uppercase font-[700]">NCBI</div><div className="mt-2 text-[14px] font-[600] lowercase" style={{fontFamily:"var(--font-fraunces)"}}>bookshelf</div><div className="text-[12px] opacity-60">StatPearls, disease chapters</div><div className="mt-3 text-[11px] underline decoration-[#ff6f1e]">ncbi.nlm.nih.gov/books →</div></a>
+            <a href="https://openstax.org/details/books/anatomy-and-physiology-2e" target="_blank" className="rounded-[12px] border border-[#171717] bg-[#fdfbf9] p-5 block"><div className="text-[11px] tracking-[0.14em] uppercase font-[700]">OpenStax</div><div className="mt-2 text-[14px] font-[600] lowercase" style={{fontFamily:"var(--font-fraunces)"}}>anatomy and physiology 2e</div><div className="text-[12px] opacity-60">textbook-grade PDF</div><div className="mt-3 text-[11px] underline decoration-[#ff6f1e]">openstax.org →</div></a>
+            <a href="https://medlineplus.gov/" target="_blank" className="rounded-[12px] border border-[#171717] bg-[#fdfbf9] p-5 block"><div className="text-[11px] tracking-[0.14em] uppercase font-[700]">MedlinePlus</div><div className="mt-2 text-[14px] font-[600] lowercase" style={{fontFamily:"var(--font-fraunces)"}}>patient handouts</div><div className="text-[12px] opacity-60">plain language sheets</div><div className="mt-3 text-[11px] underline decoration-[#ff6f1e]">medlineplus.gov →</div></a>
+            <div className="rounded-[12px] border border-dashed border-[#171717]/30 bg-white p-5 text-center grid place-items-center"><div className="text-[12px] tracking-[0.14em] uppercase font-[700] opacity-60">your own</div><div className="mt-1 text-[13px] font-[500]">college notes, hospital handbooks, any PDF you trust</div><div className="mt-2 text-[11px] opacity-50">upload in chat, instantly indexed</div></div>
+          </div>
+        </div>
+      </section>
+
+
       {/* SOURCES / DISCLAIMER */}
       <section id="sources" className="mx-auto max-w-[1200px] px-4 sm:px-6 py-8 grid lg:grid-cols-[1.2fr_0.8fr] gap-6">
         <div className="rounded-[12px] border border-[#171717] bg-[#171717] text-[#fdfbf9] p-6 sm:p-8">
@@ -184,3 +204,5 @@ export default function Home() {
     </div>
   );
 }
+
+
