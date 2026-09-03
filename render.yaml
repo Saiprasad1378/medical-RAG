@@ -10,7 +10,10 @@ services:
         sync: false
       - key: RERANK_MODEL
         value: cross-encoder/ms-marco-TinyBERT-L-2-v2
-    disk:
-      name: chroma-data
-      mountPath: /app/chroma_db
-      sizeGB: 1
+    # FREE TIER: no disk (Chroma is baked into Docker at build via `python ingest.py`).
+    # Uploads via POST /upload will be ephemeral and reset on redeploy/restart — fine for demo.
+    # To make uploads persistent, upgrade to Starter ($7/mo) and add:
+    # disk:
+    #   name: chroma-data
+    #   mountPath: /app/chroma_db
+    #   sizeGB: 1
