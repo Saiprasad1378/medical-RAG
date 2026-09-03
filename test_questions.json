@@ -1,0 +1,152 @@
+[
+  {
+    "question": "What are the common symptoms of dengue fever?",
+    "ground_truth": "Common symptoms include high fever, severe headache, pain behind the eyes, muscle and joint pain, nausea, vomiting, and a skin rash.",
+    "expected_source": "who_dengue.pdf"
+  },
+  {
+    "question": "When does dengue become dangerous?",
+    "ground_truth": "Dengue becomes dangerous when fever subsides, warning signs appear: severe abdominal pain, persistent vomiting, bleeding gums, rapid breathing, and fatigue — requires immediate hospital care.",
+    "expected_source": "who_dengue.pdf"
+  },
+  {
+    "question": "How can I prevent mosquito-borne dengue at home?",
+    "ground_truth": "Use mosquito nets and repellents, wear full-sleeve clothing, remove standing water in containers, and cover water storage tanks.",
+    "expected_source": "who_dengue.pdf"
+  },
+  {
+    "question": "What are the early warning signs of diabetes?",
+    "ground_truth": "Early signs include excessive thirst, frequent urination, unexplained weight loss, fatigue, blurred vision, and slow-healing wounds.",
+    "expected_source": "cdc_diabetes.pdf"
+  },
+  {
+    "question": "What is the difference between type 1 and type 2 diabetes?",
+    "ground_truth": "Type 1 is an autoimmune condition where the body produces little or no insulin; type 2 develops when the body becomes resistant to insulin, often linked to lifestyle and weight.",
+    "expected_source": "cdc_diabetes.pdf"
+  },
+  {
+    "question": "What lifestyle changes help manage high blood pressure?",
+    "ground_truth": "Reduce salt intake, exercise regularly, maintain healthy weight, limit alcohol, avoid tobacco, and manage stress.",
+    "expected_source": "cdc_hypertension.pdf"
+  },
+  {
+    "question": "What blood pressure reading counts as hypertension?",
+    "ground_truth": "A consistent reading of 140/90 mmHg or higher is generally classified as hypertension.",
+    "expected_source": "cdc_hypertension.pdf"
+  },
+  {
+    "question": "What triggers migraine headaches?",
+    "ground_truth": "Common triggers include stress, hormonal changes, certain foods and additives, bright lights, strong smells, sleep changes, and weather changes.",
+    "expected_source": "merck_manual.pdf"
+  },
+  {
+    "question": "How is a migraine different from a normal headache?",
+    "ground_truth": "Migraines are typically throbbing, one-sided, moderate-to-severe, and accompanied by nausea, vomiting, or sensitivity to light and sound.",
+    "expected_source": "merck_manual.pdf"
+  },
+  {
+    "question": "What are common symptoms of asthma?",
+    "ground_truth": "Asthma symptoms include wheezing, shortness of breath, chest tightness, and coughing, especially at night or during exercise.",
+    "expected_source": "cdc_asthma.pdf"
+  },
+  {
+    "question": "How do you treat the common cold at home?",
+    "ground_truth": "Rest, stay hydrated, use warm liquids like soup, try honey for cough, use saline nasal drops, and consider over-the-counter symptom relief.",
+    "expected_source": "cdc_common_cold.pdf"
+  },
+  {
+    "question": "When should you see a doctor for a fever?",
+    "ground_truth": "See a doctor if fever exceeds 103°F (39.4°C), lasts more than 3 days, is accompanied by severe headache, stiff neck, confusion, or difficulty breathing.",
+    "expected_source": "cdc_fever.pdf"
+  },
+  {
+    "question": "What complications can diabetes cause if left untreated?",
+    "ground_truth": "Untreated diabetes can lead to heart disease, stroke, kidney damage, nerve damage, eye problems, and foot complications potentially leading to amputation.",
+    "expected_source": "cdc_diabetes.pdf"
+  },
+  {
+    "question": "What are the warning signs of a heart attack?",
+    "ground_truth": "Warning signs include chest pain or discomfort, pain in arms jaw neck or back, shortness of breath, cold sweat, nausea, and lightheadedness.",
+    "expected_source": "cdc_heart_disease.pdf"
+  },
+  {
+    "question": "What foods help lower blood pressure?",
+    "ground_truth": "Foods rich in potassium like bananas, leafy greens, and sweet potatoes; low-sodium foods; whole grains; and foods high in magnesium and fiber help lower blood pressure.",
+    "expected_source": "cdc_hypertension.pdf"
+  },
+  {
+    "question": "What are the side effects of asthma inhalers?",
+    "ground_truth": "Common side effects include oral thrush, hoarse voice, throat irritation, headache, and occasional increased heart rate.",
+    "expected_source": "cdc_asthma.pdf"
+  },
+  {
+    "question": "How does exercise affect blood sugar levels?",
+    "ground_truth": "Exercise helps lower blood sugar by increasing insulin sensitivity and allowing muscles to use glucose for energy. However, intense exercise can sometimes cause blood sugar to drop too low.",
+    "expected_source": "cdc_diabetes.pdf"
+  },
+  {
+    "question": "What is the difference between a migraine and a tension headache?",
+    "ground_truth": "Migraines are throbbing, one-sided, and often accompanied by nausea and light sensitivity. Tension headaches are dull, bilateral, band-like pressure without nausea.",
+    "expected_source": "merck_manual.pdf"
+  },
+  {
+    "question": "Can high blood pressure cause kidney damage?",
+    "ground_truth": "Yes, high blood pressure damages blood vessels in the kidneys, reducing their ability to filter blood properly, which can lead to chronic kidney disease or kidney failure.",
+    "expected_source": "cdc_hypertension.pdf"
+  },
+  {
+    "question": "What are the symptoms of dehydration?",
+    "ground_truth": "Symptoms include thirst, dry mouth, reduced urination, dark urine, fatigue, dizziness, and in severe cases, rapid heartbeat and fainting.",
+    "expected_source": "merck_manual.pdf"
+  },
+  {
+    "question": "How is dengue diagnosed?",
+    "ground_truth": "Dengue is diagnosed through blood tests including NS1 antigen test (early stages) and antibody tests (IgM/IgG). Complete blood count showing low platelets also supports diagnosis.",
+    "expected_source": "who_dengue.pdf"
+  },
+  {
+    "question": "What should I eat during dengue fever?",
+    "ground_truth": "Drink plenty of fluids, consume papaya leaf juice, eat light easily digestible foods, include foods rich in vitamin C, and avoid oily and spicy food.",
+    "expected_source": "who_dengue.pdf"
+  },
+  {
+    "question": "How can I prevent diabetes?",
+    "ground_truth": "Maintain healthy weight, exercise regularly, eat balanced diet low in refined sugars, limit processed foods, and get regular blood sugar screenings.",
+    "expected_source": "cdc_diabetes.pdf"
+  },
+  {
+    "question": "What is normal blood pressure?",
+    "ground_truth": "Normal blood pressure is typically below 120/80 mmHg. Elevated is 120-129/<80, Stage 1 hypertension is 130-139/80-89, and Stage 2 is 140+/90+.",
+    "expected_source": "cdc_hypertension.pdf"
+  },
+  {
+    "question": "What causes asthma attacks?",
+    "ground_truth": "Common triggers include allergens like dust mites and pollen, respiratory infections, cold air, exercise, air pollution, smoke, strong emotions, and certain medications.",
+    "expected_source": "cdc_asthma.pdf"
+  },
+  {
+    "question": "Can stress cause physical symptoms?",
+    "ground_truth": "Yes, stress can cause headaches, muscle tension, chest pain, fatigue, stomach problems, sleep issues, anxiety, and difficulty concentrating.",
+    "expected_source": "merck_manual.pdf"
+  },
+  {
+    "question": "What is the treatment for malaria?",
+    "ground_truth": "Treatment depends on malaria type and severity. Common medications include artemisinin-based combination therapies (ACTs) for uncomplicated malaria and intravenous artesunate for severe cases.",
+    "expected_source": "who_malaria.pdf"
+  },
+  {
+    "question": "How is malaria prevented?",
+    "ground_truth": "Prevention includes using insecticide-treated bed nets, indoor residual spraying, taking prophylactic medication when traveling to endemic areas, and eliminating standing water where mosquitoes breed.",
+    "expected_source": "who_malaria.pdf"
+  },
+  {
+    "question": "What are the symptoms of thyroid problems?",
+    "ground_truth": "Symptoms vary: hypothyroidism causes weight gain, fatigue, cold sensitivity, constipation; hyperthyroidism causes weight loss, rapid heartbeat, anxiety, sweating, and tremors.",
+    "expected_source": "merck_manual.pdf"
+  },
+  {
+    "question": "When should I go to the emergency room?",
+    "ground_truth": "Go to ER for chest pain, difficulty breathing, severe bleeding, stroke symptoms, seizure, loss of consciousness, severe allergic reaction, or high fever unresponsive to medication.",
+    "expected_source": "cdc_emergency.pdf"
+  }
+]

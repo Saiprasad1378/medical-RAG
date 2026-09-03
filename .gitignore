@@ -1,0 +1,17 @@
+# python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+chroma_db/
+.pytest_cache/
+.env
+# next
+web/node_modules/
+web/.next/
+web/out/
+web/.vercel
+# streamlit legacy still keep but ignore uploads
+data/pdfs/*.pdf
+!data/pdfs/.gitkeep
