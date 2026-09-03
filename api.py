@@ -133,6 +133,36 @@ async def upload(files: List[UploadFile] = File(...)):
         except Exception as e:
             logger.warning(f"failed to open {dest}: {e}")
             continue
+        # detect scanned PDF (no extractable text)
+        total_len = sum(len(pg["text"] or "") for pg in pages)
+        if total_len < 100:
+            # try OCR fallback if pytesseract available
+            try:
+                import fitz
+                ocr_texts = []
+                with fitz.open(dest) as doc2:
+                    for i, pg2 in enumerate(doc2):
+                        if len(pg2.get_text("text").strip()) < 20:
+                            try:
+                                import pytesseract
+                                from PIL import Image
+                                pix = pg2.get_pixmap(dpi=200)
+                                img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+                                ocr = pytesseract.image_to_string(img)
+                                if ocr.strip():
+                                    ocr_texts.append({"text": ocr, "page": i+1})
+                            except Exception as e:
+                                pass
+                if ocr_texts:
+                    pages = ocr_texts
+                    total_len = sum(len(x["text"]) for x in pages)
+                else:
+                    logger.warning(f"{dest.name} appears scanned (no text, {total_len} chars) - no OCR")
+                    # keep added 0 but return helpful message
+                    continue
+            except Exception as e:
+                logger.warning(f"scanned check failed for {dest.name}: {e}")
+                continue
         chunks=[]
         for pg in pages:
             cleaned=_clean_text(pg["text"])
@@ -152,6 +182,8 @@ async def upload(files: List[UploadFile] = File(...)):
     if hasattr(rag, "_bm25"):
         rag._bm25 = None
         rag._bm25_docs=[]
+    if added == 0 and saved_names:
+        return {"added_chunks": 0, "kb_chunks": col.count(), "files": saved_names, "warning": "No extractable text found - PDF appears scanned (image-only). Try a text-selectable PDF from WHO/CDC/OpenStax (see 'where to find PDFs') or use an OCR tool."}
     return {"added_chunks": added, "kb_chunks": col.count(), "files": saved_names}
 
 @app.get("/")
